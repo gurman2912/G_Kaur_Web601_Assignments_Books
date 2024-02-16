@@ -1,4 +1,24 @@
+h1 {
+    text-align: center;
+    background-color: gray;
+    padding: 10px;
+    margin-top: 0;
+}
+
 .content-card {
     padding-left: 20px;
     margin-left: 10px;
+    border: 1px solid black;
+}
+
+.filter{
+    text-align: right;
+    margin: 5px;
+}
+.container {
+    text-align: center;
+}
+
+.message{
+    text-align: center;
 }
