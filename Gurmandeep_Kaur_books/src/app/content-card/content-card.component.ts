@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContentList } from '../helper-files/content-list';
+//import { ContentList } from '../helper-files/content-list';
 
 @Component({
   selector: 'app-content-card',
@@ -10,7 +10,7 @@ import { ContentList } from '../helper-files/content-list';
 })
 export class ContentCardComponent implements OnInit{
 
-  content :ContentList;
+ /*  content :ContentList;
 
   constructor() { 
     this.content= new ContentList
@@ -44,7 +44,7 @@ export class ContentCardComponent implements OnInit{
         tags: ["Tag1", "Tag2"]
       });
 
-  }
+  } */
   ngOnInit(): void {
     throw new Error('Method not implemented.');
   }

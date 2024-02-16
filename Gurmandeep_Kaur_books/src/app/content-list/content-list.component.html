@@ -1,0 +1,8 @@
+<div *ngFor="let content of contentList; let first = first; let i = index" class="content-card" [style.border]="first ? '2px solid black' : '1px solid black'">
+    <h1>{{ content.title }}</h1>
+    <img [src]="content.imgURL" (click)="displayContent(content)">
+    <p>{{ content.description }}</p>
+    <p>Creator: {{ content.creator }}</p>
+    <p *ngIf="content.type">Type: {{ content.type }}</p>
+    <p *ngIf="content.tags?.length">Tags: {{ content.tags }}</p>
+</div>
