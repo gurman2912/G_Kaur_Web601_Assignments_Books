@@ -1,1 +1,2 @@
-# G_Kaur_Web601_Assignments_Books
+# G_Kaur_WEB601Assignments_Books
+The "G_Kaur_WEB601Assignments_Books" Angular project likely involves developing a web application using the Angular framework. This involves creating components to build the user interface, organizing functionality into modules, managing navigation with routing, implementing services for reusable logic, handling forms and HTTP requests, utilizing dependency injection for modular code, and leveraging RxJS for asynchronous operations. The project may focus on features like displaying books, managing user interactions, and possibly integrating with a backend server for data storage and retrieva
