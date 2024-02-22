@@ -56,15 +56,6 @@ export class ContentListComponent {
       imgURL: 'https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1554086139i/19288043.jpg',
       type: 'Mystery',
       tags: []
-    },
-    {
-      id: 6,
-      title: "The Silent Patient",
-      description: "Description 6",
-      creator: "Alex Michaelides ",
-      imgURL: 'https://d3myrwj42s63no.cloudfront.net/300/978/125/030/169/7/9781250301697.jpg',
-      type: 'Thriller',
-      tags: []
     }
   ];
   contentArray: any;
