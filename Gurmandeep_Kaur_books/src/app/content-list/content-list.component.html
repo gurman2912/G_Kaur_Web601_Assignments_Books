@@ -16,53 +16,22 @@
 <p class="message" [style.color]="isFound ? 'green' : 'red'">{{ message }}</p>
 
 <div class="container">
-<div *ngFor="let content of contentList | contentFilter: 'Fiction'">
-  <div class="content-card" [ngStyle]="{ 'background-color': getBackgroundColor (content.type) }">
-    <h3>{{ content.title }}</h3>
-    <img [src]="content.imgURL" alt="Image">
-    <p>{{ content.description }}</p>
-    <p>Creator: {{ content.creator }}</p>
-    <p>Type: {{ content.type || 'Not specified' }}</p>
-    <p *ngIf="content.tags?.length">Tags: {{ content.tags }}</p>
-   
-  </div>
-</div>
-
-<div *ngFor="let content of contentList | contentFilter: 'Fantasy'">
-    <div class="content-card" [ngStyle]="{ 'background-color': getBackgroundColor (content.type) }">
-      <h3>{{ content.title }}</h3>
-      <img [src]="content.imgURL" alt="Image">
-      <p>{{ content.description }}</p>
-      <p>Creator: {{ content.creator }}</p>
-      <p>Type: {{ content.type || 'Not specified' }}</p>
-      <p *ngIf="content.tags?.length">Tags: {{ content.tags }}</p>
-     
-    </div>
+  <div [style.backgroundColor]="getBackgroundColor('Fiction')">
+    <app-content-card *ngFor="let con of contentList | contentFilter: 'Fiction'" [content]="con"></app-content-card>
   </div>
 
-  <div *ngFor="let content of contentList | contentFilter: 'Thriller'">
-    <div class="content-card" [ngStyle]="{ 'background-color': getBackgroundColor (content.type) }">
-      <h3>{{ content.title }}</h3>
-      <img [src]="content.imgURL" alt="Image">
-      <p>{{ content.description }}</p>
-      <p>Creator: {{ content.creator }}</p>
-      <p>Type: {{ content.type || 'Not specified' }}</p>
-      <p *ngIf="content.tags?.length">Tags: {{ content.tags }}</p>
-     
-    </div>
+  <div [style.backgroundColor]="getBackgroundColor('Fantasy')" >
+    <app-content-card *ngFor="let con of contentList | contentFilter: 'Fantasy'" [content]="con"></app-content-card>
   </div>
 
-  <div *ngFor="let content of contentList | contentFilter: ''">
-    <div class="content-card" [ngStyle]="{ 'background-color': getBackgroundColor (content.type) }">
-      <h3>{{ content.title }}</h3>
-      <img [src]="content.imgURL" alt="Image">
-      <p>{{ content.description }}</p>
-      <p>Creator: {{ content.creator }}</p>
-      <p>Type: {{ content.type || 'Not specified' }}</p>
-      <p *ngIf="content.tags?.length">Tags: {{ content.tags }}</p>
-     
-    </div>
+  <div [style.backgroundColor]="getBackgroundColor('Thriller')" >
+    <app-content-card *ngFor="let con of contentList | contentFilter: 'Thriller'" [content]="con"></app-content-card>
   </div>
+
+  <div [style.backgroundColor]="getBackgroundColor('')">
+    <app-content-card *ngFor="let con of contentList | contentFilter: ''" [content]="con"></app-content-card>
+  </div>
+
 </div>
 
   
