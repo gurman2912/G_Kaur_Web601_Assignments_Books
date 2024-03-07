@@ -14,7 +14,7 @@
 <button (click)="checkTitle()">Search</button>
 </div>
 <p class="message" [style.color]="isFound ? 'green' : 'red'">{{ message }}</p>
-
+<app-create-content (contentAdded)="onContentAdded($event)"></app-create-content>
 <div class="container">
   <div [style.backgroundColor]="getBackgroundColor('Fiction')">
     <app-content-card *ngFor="let con of contentList | contentFilter: 'Fiction'" [content]="con"></app-content-card>
@@ -34,7 +34,7 @@
 
 </div>
 
-<app-create-content (contentAdded)="onContentAdded($event)"></app-create-content>
+
 
   
 
