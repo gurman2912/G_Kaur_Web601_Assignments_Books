@@ -1,21 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, createComponent } from '@angular/core';
 import { Content } from '../helper-files/content-interface';
 import { CommonModule } from '@angular/common';
 import { ContentFilterPipe } from '../content-filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { HoverAffectDirective } from '../hover-affect.directive';
 import { ContentCardComponent } from '../content-card/content-card.component';
+import { CreateContentComponent } from '../create-content/create-content.component';
 @Component({
   selector: 'app-content-list',
   standalone: true,
-  imports: [CommonModule,ContentFilterPipe, FormsModule, HoverAffectDirective , ContentCardComponent],
+  imports: [CommonModule,ContentFilterPipe, FormsModule, HoverAffectDirective , ContentCardComponent, CreateContentComponent],
   templateUrl: './content-list.component.html',
   styleUrl: './content-list.component.scss'
 })
 export class ContentListComponent {
 
   contentList: Content[] 
-
+  onContentAdded(newContent: any) {
+    this.contentList.push({ ...newContent });
+  }
   constructor() { 
     this.contentList= [
       {
