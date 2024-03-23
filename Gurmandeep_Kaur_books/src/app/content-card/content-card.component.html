@@ -2,15 +2,15 @@
 <div [innerHTML]="content.getContentAtIndex(1)" ></div>
 <div [innerHTML]="content.getContentAtIndex(2)" ></div>
  -->
- <div class="content-card">
-    <h3>{{ content.title }}</h3>
-    <img *ngIf="content.imgURL; else defaultImage" [src]="content.imgURL" alt="Content Image">
-    <ng-template #defaultImage>
-      <img src="https://i.pinimg.com/originals/dc/2f/0d/dc2f0df1483ba3a62635a9d12bae1320.jpg" alt="Default Image">
-    </ng-template>
-    <p>{{ content.description }}</p>
-    <p>Creator: {{ content.creator }}</p>
-    <p appHoverAffect affect="underline">Type: {{ content.type }}</p>
-    <p *ngFor="let tag of content.tags" appHoverAffect affect ="bold"> Tag: {{ content.tags }}</p>
-    
-  </div>
+
+<div class="content-card">
+  <h3>{{ content.title }}</h3>
+  <img *ngIf="content.imgURL; else defaultImage" [src]="content.imgURL" alt="Content Image">
+  <ng-template #defaultImage>
+    <img src="https://i.pinimg.com/originals/dc/2f/0d/dc2f0df1483ba3a62635a9d12bae1320.jpg" alt="Default Image">
+  </ng-template>
+  <p>{{ content.description }}</p>
+  <p>Creator: {{ content.creator }}</p>
+  <p appHoverAffect affect="underline">Type: {{ content.type }}</p>
+  <p *ngFor="let tag of content.tags" appHoverAffect affect ="bold"> Tag: {{ content.tags }}</p>  
+</div>
